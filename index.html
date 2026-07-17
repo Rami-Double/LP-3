@@ -1926,6 +1926,74 @@ h2 {
   line-height: 1.62;
 }
 
+/* Hero ajuste solicitado: sem topo fixo, texto mais alto e fichas animadas */
+.compliance-page .topbar {
+  display: none;
+}
+
+.compliance-hero {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.compliance-media img {
+  width: min(118%, 610px);
+  height: min(72svh, 700px);
+  object-fit: cover;
+  object-position: center -8px;
+}
+
+.compliance-hero-content {
+  padding-top: min(31svh, 258px);
+}
+
+.hero-double-tokens {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 390px);
+  height: 62px;
+  margin: 0 auto 8px;
+  pointer-events: none;
+}
+
+.double-token {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 950;
+  line-height: 1;
+  animation: floatChip 4.8s ease-in-out infinite, tokenPulse 2.6s ease-in-out infinite;
+}
+
+.double-token-red {
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  background: radial-gradient(circle at 30% 24%, #ff87a1, #ff2858 58%, #9d1233);
+  box-shadow: 0 0 28px rgba(255, 51, 100, .48), 0 14px 34px rgba(0, 0, 0, .28);
+  transform: rotate(-7deg);
+}
+
+.double-token-white {
+  width: 50px;
+  height: 50px;
+  color: #141722;
+  background: radial-gradient(circle at 30% 24%, #fff, #eef3f8 62%, #a6afbb);
+  box-shadow: 0 0 26px rgba(255, 255, 255, .42), 0 12px 30px rgba(0, 0, 0, .24);
+  animation-delay: .55s;
+}
+
+@keyframes tokenPulse {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.16);
+  }
+}
+
 @media (max-width: 380px) {
   .compliance-hero h1 {
     font-size: 29px;
@@ -1999,19 +2067,10 @@ h2 {
   }
 }
 
-</style>
+  </style>
 </head>
 <body class="compliance-page">
   <div class="site-bg" aria-hidden="true"></div>
-
-  <header class="topbar" aria-label="Topo">
-    <a class="brand" href="#top" aria-label="Rami comunidade 18+">
-      <span class="brand-copy">
-        <strong>Rami Comunidade 18+</strong>
-      </span>
-    </a>
-    <a class="top-cta js-cta" href="https://chat.whatsapp.com/Ei5EIoX5AhdHChbSWFykxp">Acessar</a>
-  </header>
 
   <main id="top">
     <section class="hero compliance-hero" aria-labelledby="hero-title">
@@ -2020,6 +2079,10 @@ h2 {
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content compliance-hero-content">
+        <div class="hero-double-tokens reveal" aria-hidden="true">
+          <span class="double-token double-token-red">7</span>
+          <span class="double-token double-token-white">14</span>
+        </div>
         <p class="eyebrow reveal">Comunidade gratuita do Rami</p>
         <h1 id="hero-title" class="reveal">Veja por dentro como o Rami organiza a própria rotina no Double</h1>
         <p class="hero-copy reveal">Acesse a comunidade gratuita e acompanhe conteúdos sobre controle, responsabilidade e saiba COMO o Rami estrutura a própria operação no dia a dia.</p>
@@ -2173,7 +2236,6 @@ h2 {
   <a class="sticky-cta js-cta" href="https://chat.whatsapp.com/Ei5EIoX5AhdHChbSWFykxp">
     Acessar Comunidade
   </a>
-
   <script>
 (function () {
   var CTA_LINK = "https://chat.whatsapp.com/Ei5EIoX5AhdHChbSWFykxp";
@@ -2219,6 +2281,6 @@ h2 {
   window.addEventListener("scroll", updateParallax, { passive: true });
 })();
 
-</script>
+  </script>
 </body>
 </html>
