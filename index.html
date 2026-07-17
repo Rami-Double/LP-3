@@ -1150,14 +1150,14 @@ h2 {
 }
 
 .footer {
-  padding: 12px 0 104px;
+  padding: 8px 0 104px;
   color: var(--soft);
   font-size: 11px;
   line-height: 1.55;
   text-align: center;
 }
 
-.footer strong {
+.footer > .wrap > p strong {
   display: inline-grid;
   place-items: center;
   min-width: 38px;
@@ -1166,6 +1166,11 @@ h2 {
   border: 1px solid rgba(245, 198, 106, .34);
   border-radius: 999px;
   color: var(--gold);
+}
+
+.footer .legal-tag {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .sticky-cta {
@@ -2141,29 +2146,27 @@ h2 {
           Acessar Comunidade
           <span>Link oficial do WhatsApp</span>
         </a>
-        <div class="legal-tag" aria-label="Aviso 18+. Jogue com responsabilidade. Autorização SPA número 260 de 2025. Ministério da Fazenda adverte: aposta não é investimento.">
-          <p class="legal-tag__rights">Rami - Todos os direitos reservados</p>
-          <div class="legal-tag__bar">
-            <strong class="legal-tag__age">+18</strong>
-            <span class="legal-tag__message">
-              <b>Jogue com responsabilidade</b>
-              <small>Autorização SPA nº 260/2025</small>
-            </span>
-            <span class="legal-tag__alert" aria-hidden="true">!</span>
-            <span class="legal-tag__message">
-              <b>Ministério da Fazenda adverte</b>
-              <small>Aposta não é investimento</small>
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="wrap">
-      <p><strong>18+.</strong> Jogue com responsabilidade. Ministério da Fazenda adverte: aposta não é investimento.</p>
-      <p>Jogos e apostas envolvem risco financeiro. Esta página não oferece garantia de resultados, previsões, recomendações de aposta ou promessa de retorno.</p>
+      <div class="legal-tag" aria-label="Aviso 18+. Jogue com responsabilidade. Autorização SPA número 260 de 2025. Ministério da Fazenda adverte: aposta não é investimento.">
+        <p class="legal-tag__rights">Rami - Todos os direitos reservados</p>
+        <div class="legal-tag__bar">
+          <strong class="legal-tag__age">+18</strong>
+          <span class="legal-tag__message">
+            <b>Jogue com responsabilidade</b>
+            <small>Autorização SPA nº 260/2025</small>
+          </span>
+          <span class="legal-tag__alert" aria-hidden="true">!</span>
+          <span class="legal-tag__message">
+            <b>Ministério da Fazenda adverte</b>
+            <small>Aposta não é investimento</small>
+          </span>
+        </div>
+      </div>
     </div>
   </footer>
 
